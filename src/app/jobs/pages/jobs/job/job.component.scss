@@ -1,0 +1,66 @@
+.job {
+  border: 1px solid #dcd8d8;
+  padding: 15px;
+  background: #fff;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  border-radius: 6px;
+  transition: 0.25s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  }
+
+  .job-logo {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+
+  .job-meta {
+    color: #848484;
+    font-size: 11px;
+
+    .job-posted {
+      margin-right: 10px;
+    }
+  }
+
+  .job-title {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 5px 0;
+
+    a {
+      color: #353535;
+    }
+  }
+
+  .action-button {
+  }
+
+  .job-remove {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    color: #c52d2d;
+    cursor: pointer;
+    z-index: 9;
+    padding: 10px;
+  }
+
+  .job-remove fa-icon {
+    cursor: pointer;
+  }
+
+}
+
+.job {
+  background: #c2d3e5;
+
+  &:hover {
+    background: #86b2e1;
+  }
+}

@@ -1,0 +1,78 @@
+.new-job {
+  padding: 5px 45px 40px 45px;
+  display: flex;
+  align-items: center;
+
+  &__header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  &__back {
+    padding: 17px 0;
+    margin-top: -15 px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__column {
+    width: 100%;
+    margin: 0 15px;
+  }
+  input,
+  select,
+  textarea {
+    &::-webkit-input-placeholder { /* Edge */
+      color: #000;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #000;
+    }
+    &::placeholder {
+      color: #000;
+    }
+    &:focus {
+      outline: none;
+      border: 0 none;
+    }
+  }
+
+
+
+  input,
+  select {
+    background: #9cc5f1;
+    border: 0 none;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color: #000;
+    border-radius: 0 !important;
+    min-height: 60px;
+  }
+  textarea {
+    background: #9cc5f1;
+    border: 0 none;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color: #000;
+    border-radius: 0 !important;
+    height: 60px;
+    width: 100%;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}
+
+.margin-top-61 {
+  margin-top: 61px;
+}
+
+.post-button {
+  position: absolute;
+  right: 65px;
+  padding: 10px 51px;
+}

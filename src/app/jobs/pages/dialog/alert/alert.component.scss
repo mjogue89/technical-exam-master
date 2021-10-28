@@ -1,0 +1,38 @@
+.dialog {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__content {
+    padding: 38px 0;
+  }
+
+  &__clear {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &-yes {
+      background: #0053ad;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      margin-right: 15px;
+    }
+
+    &-no {
+      background: #adadad;
+      padding: 10px 25px;
+      border-radius: 5px;
+      color: white;
+      margin-right: 15px;
+    }
+  }
+}

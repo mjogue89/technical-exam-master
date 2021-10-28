@@ -1,0 +1,53 @@
+<div class="desc">
+  <div class="desc__back" (click)="goBack()">
+    <fa-icon [icon]="backArrow"></fa-icon>
+    back
+  </div>
+  <div class="desc__header">
+    <div>
+      <div class="desc__card">
+        <img [src]="selectedJob[0]?.logo" class="desc__card-logo" />
+        <div class="desc__card-meta">
+          <!-- TODO: create a pipe for date -->
+          <span class="desc__card-posted">{{ selectedJob[0]?.date | date:'fullDate' }}</span>
+          <div class="desc__card-title">
+            <a>{{ selectedJob[0]?.title }}</a>
+          </div>
+          <div class="desc__card-company">
+            <a href="#">{{ selectedJob[0]?.company }}</a>
+          </div>
+        </div>
+        <div class="desc__card-status">
+          <span>{{ selectedJob[0]?.type === 1 ? "Full Time" : "Part Time" }}</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="desc__edit">
+        <fa-icon matTooltip="Edit Job Description" (click)="allowEdit = true" [icon]="edit"></fa-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="desc__content" *ngIf="!allowEdit">
+    <h1>{{selectedJob[0]?.title}} Job Description</h1>
+    <p>{{desc.description}}</p>
+    <h1>{{selectedJob[0]?.title}} Responsibilities</h1>
+    <p>{{desc.responsibility}}</p>
+    <h1>{{selectedJob[0]?.title}} Requirements</h1>
+    <p>{{desc.requirements}}</p>
+  </div>
+  <form [formGroup]="descriptionForm" class="desc__inputs" *ngIf="allowEdit">
+    <h1>{{selectedJob[0]?.title}} Job Description</h1>
+    <textarea formControlName="description" name="{{desc.description}}}" [(ngModel)]="desc.description"></textarea>
+    <h1>{{selectedJob[0]?.title}} Responsibilities</h1>
+    <textarea formControlName="responsibility" name="{{desc.responsibility}}}"
+              [(ngModel)]="desc.responsibility"></textarea>
+    <h1>{{selectedJob[0]?.title}} Requirements</h1>
+    <textarea formControlName="requirements" name="{{desc.requirements}}}" [(ngModel)]="desc.requirements"></textarea>
+    <div class="desc__inputs-action">
+      <div class="desc__inputs-action-cancel">Cancel</div>
+      <div class="desc__inputs-action-save" (click)="updateJobDescription()">Save</div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,92 @@
+.desc {
+  padding: 40px;
+
+  &__back {
+    padding: 17px 0;
+    margin-top: -15 px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+  }
+
+  &__card {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-bottom: 20px;
+
+    &-title {
+      font-size: 35px;
+      margin-top: 9px;
+      margin-bottom: 20px;
+    }
+
+    &-meta {
+      padding: 3px 10px;
+    }
+
+    &-posted {
+      font-size: 18px;
+    }
+
+    &-status {
+      border: 1px solid black;
+      padding: 4px 15px;
+      border-radius: 7px;
+      margin-top: -6 px;
+      background: #007bff;
+      color: white;
+    }
+
+    &-company {
+      font-size: 18px;
+    }
+  }
+
+  &__edit {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__inputs {
+    textarea {
+      width: 100%;
+      min-height: 125px;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    &-action {
+      display: flex;
+      align-items: end;
+      padding: 15px;
+      justify-content: end;
+
+      &-save {
+        background: #007bff;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin-left: 24px;
+        cursor: pointer;
+      }
+
+      &-cancel {
+        color: #007bff;
+        padding: 10px 30px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  h1 {
+    color: #007bff;
+  }
+
+}

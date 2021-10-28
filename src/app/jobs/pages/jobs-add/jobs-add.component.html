@@ -1,0 +1,58 @@
+<header class="new-job__header">
+  <div class="new-job__back" (click)="back()">
+    <fa-icon [icon]="backArrow"></fa-icon>
+    back
+  </div>
+  <a href="#" class="brand">New Job</a>
+</header>
+<div class="new-job">
+  <form [formGroup]="addForm" class="new-job__column">
+    <div class="new-job__forms">
+      <div class="py-2 my-2">
+        <h3>Job Position</h3>
+        <input type="text"
+               placeholder="Job Position"
+               class="d-block my-2 p-2 w-100"
+               formControlName="title" />
+      </div>
+      <div class="py-2 my-2">
+        <h3>Select Your Company</h3>
+        <select
+          formControlName="company"
+          class="d-block my-2 p-2 w-100"
+          name="cars"
+          label="Company Name">
+          <option value="">Company</option>
+          <option *ngFor="let com of company" value="{{com.company}}">{{com.company}}</option>
+        </select>
+      </div>
+      <div class="py-2 my-2">
+        <h3>Employment Status</h3>
+        <select
+          formControlName="type"
+          class="d-block my-2 p-2 w-100"
+          name="Status"
+          label="Status">
+          <option value="">Status</option>
+          <option value="0">Part Time</option>
+          <option value="1">Full Time</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <form [formGroup]="descAddForm" class="new-job__column">
+    <div class="py-2 my-2">
+      <h3>Job Description</h3>
+      <textarea formControlName="description"></textarea>
+    </div>
+    <div class="py-2 my-2">
+      <h3>Job Responsibilities</h3>
+      <textarea formControlName="responsibility"></textarea>
+    </div>
+    <div class="py-2 my-2">
+      <h3>Job Requirements</h3>
+      <textarea formControlName="requirements"></textarea>
+    </div>
+  </form>
+</div>
+<button type="button" class="post-button btn btn-primary" (click)="addPost()">Post</button>
